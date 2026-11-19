@@ -6,7 +6,7 @@ Site de uma página para um estúdio de treino, estética e bem-estar, feito com
 
 ![Capa do projeto](docs/capa-linkedin.jpg)
 
-**[Ver o site no ar](https://SEU-USUARIO.github.io/salvia-studio/)** · [Vídeo de demonstração](docs/salvia-studio.mp4)
+**[Ver o site no ar](https://GuilhermeMachado-Dev.github.io/salvia-studio/)** · [Vídeo de demonstração](docs/salvia-studio.mp4)
 
 ## O que o site faz
 
@@ -60,4 +60,4 @@ Não há instalação nem build: baixe o repositório e abra o `index.html` no n
 
 ## Autor
 
-[Seu nome] · [LinkedIn](https://www.linkedin.com/in/SEU-PERFIL)
+[Guilherme Machado] · [LinkedIn]([https://www.linkedin.com/in/SEU-PERFIL](https://www.linkedin.com/in/guilhermemachado-dev/))
