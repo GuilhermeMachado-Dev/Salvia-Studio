@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sálvia Studio | Treino, estética e bem-estar · projeto de portfólio</title>
+<meta name="description" content="Projeto de portfólio: site de um estúdio fictício de treino, massagens, terapias e estética, com carta de serviços, agendamento pelo WhatsApp e conversa simulada.">
+<meta name="theme-color" content="#EEF1EC">
+<meta name="robots" content="noindex,nofollow"><!-- marca fictícia: não indexar para não confundir quem busca um estúdio de verdade -->
+<link rel="icon" href="img/icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap">
+<link rel="stylesheet" href="css/estilo.css">
+<!-- fica aqui de propósito: liga as animações antes da página aparecer, sem piscar -->
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-agenda" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-sinal" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M7 15h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-local" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <!-- símbolo da marca: ramo de sálvia -->
+  <symbol id="i-salvia" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 37V9"/><path d="M20 29c-8-2-11-9-9-14 6 1 10 7 9 14z"/><path d="M20 22c8-2 11-9 9-14-6 1-10 7-9 14z"/><path d="M20 13c-3-3-3-7 0-10 3 3 3 7 0 10z"/></g></symbol>
+  <!-- ilustrações das áreas (traço, viewBox 0 0 120 160) -->
+  <symbol id="a-ramo" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M58 152C56 118 60 82 70 50 76 32 82 20 88 10"/><path d="M57 128c-14-2-24-12-26-24 12 0 24 10 26 24z"/><path d="M58 110c12-6 26-4 34 6-12 6-26 4-34-6z"/><path d="M61 90c-14-4-22-16-22-28 12 2 22 14 22 28z"/><path d="M64 72c12-8 26-8 34 0-10 8-24 8-34 0z"/><path d="M70 52c-12-6-18-18-16-28 10 4 18 16 16 28z"/><path d="M76 38c10-8 22-10 30-4-8 8-20 10-30 4z"/><path d="M84 20c-6-4-8-10-6-16 6 2 8 10 6 16z"/></g></symbol>
+  <symbol id="a-treino" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="22" y="66" width="12" height="28" rx="3"/><rect x="34" y="72" width="8" height="16" rx="2"/><rect x="86" y="66" width="12" height="28" rx="3"/><rect x="78" y="72" width="8" height="16" rx="2"/><path d="M42 80h36"/><circle cx="60" cy="80" r="46" stroke-dasharray="2 6"/></g></symbol>
+  <symbol id="a-avaliacao" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="86" r="34"/><path d="M60 52v-10M52 40h16M60 86l14-14"/><path d="M60 58v4M88 86h-4M60 114v-4M32 86h4"/><path d="M30 132h60" stroke-dasharray="1 5"/></g></symbol>
+  <symbol id="a-massagens" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="60" cy="118" rx="34" ry="12"/><ellipse cx="60" cy="96" rx="26" ry="10"/><ellipse cx="60" cy="78" rx="18" ry="8"/><path d="M64 70c4-18 18-28 32-28-2 16-14 28-32 28z"/><path d="M68 64c8-6 14-12 20-18"/></g></symbol>
+  <symbol id="a-terapias" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M60 112c-10-14-10-36 0-52 10 16 10 38 0 52z"/><path d="M60 112c-16-6-26-22-26-40 14 6 24 22 26 40z"/><path d="M60 112c16-6 26-22 26-40-14 6-24 22-26 40z"/><path d="M60 112c-22 0-38-10-44-24 18-2 34 8 44 24z"/><path d="M60 112c22 0 38-10 44-24-18-2-34 8-44 24z"/><path d="M34 126h52"/></g></symbol>
+  <symbol id="a-estetica" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M60 40c16 22 26 38 26 54a26 26 0 0 1-52 0c0-16 10-32 26-54z"/><path d="M48 98a12 12 0 0 0 10 10"/><path d="M92 46v12M86 52h12M30 62v8M26 66h8"/></g></symbol>
+  <symbol id="a-depilacao" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M36 124C36 76 60 46 92 34c4 40-14 80-56 90z"/><path d="M36 124c14-26 30-48 50-80"/><path d="M48 104l-8-12M58 88l-8-14M68 72l-6-14"/></g></symbol>
+  <symbol id="a-bronze" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="74" r="20"/><path d="M60 38v-10M60 120v-10M24 74H14M106 74H96M35 49l-7-7M92 106l-7-7M85 49l7-7M28 106l7-7"/><path d="M22 132c12-6 26-6 38 0s26 6 38 0"/></g></symbol>
+  <symbol id="a-injetaveis" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="46" y="58" width="28" height="56" rx="6"/><path d="M50 58v-8h20v8M54 50v-8h12v8"/><path d="M46 86h28M46 98h14"/><path d="M86 52c4 6 6 10 6 13a6 6 0 0 1-12 0c0-3 2-7 6-13z"/></g></symbol>
+  <symbol id="a-mapa" viewBox="0 0 160 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M0 34c40 6 70-6 100 2s48 4 60 0" opacity=".5"/><path d="M0 86c30-8 60 4 90-2s50-10 70-4" opacity=".5"/><path d="M42 0c-4 40 6 80 0 120M112 0c4 34-6 76 2 120" opacity=".5"/><path d="M80 58s-14-12-14-24a14 14 0 0 1 28 0c0 12-14 24-14 24z"/><circle cx="80" cy="34" r="5"/></g></symbol>
+</svg>
+
+<header class="topo">
+  <!-- faixa do portfólio: deixa claro que a marca é fictícia e leva o interessado até você -->
+  <a class="faixa-portfolio" data-zap data-portfolio href="#" target="_blank" rel="noopener"><span class="longo">Projeto de portfólio · marca, pessoas e preços fictícios</span><span class="curto">Projeto de portfólio fictício</span><strong>Quero um site assim</strong></a>
+  <div class="wrap topo-in">
+    <a class="marca" href="#inicio" aria-label="Sálvia Studio, início"><svg aria-hidden="true"><use href="#i-salvia"/></svg><span>Sálvia Studio</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="sr">Abrir menu</span><i aria-hidden="true"></i></button>
+    <nav class="menu" id="menu" aria-label="Seções">
+      <a href="#servicos">Serviços e valores</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#agendar">Como agendar</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" data-zap href="#" target="_blank" rel="noopener"><img src="img/whatsapp-sem-fundo.png" alt="" width="24" height="24">Agendar</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="heroi" id="inicio">
+  <div class="wrap heroi-in">
+    <div>
+      <p class="lema entra" style="--d:.05s">Movimento · Cuidado · Pausa</p>
+      <h1 class="entra" style="--d:.15s">Treino, estética e bem-estar com hora marcada</h1>
+      <p class="sub entra" style="--d:.28s">Personal trainer, avaliação física, massagens, terapias, estética corporal, depilação, bronzeamento e injetáveis num só estúdio.</p>
+      <div class="acoes entra" style="--d:.4s">
+        <a class="btn" data-zap href="#" target="_blank" rel="noopener"><img src="img/whatsapp-sem-fundo.png" alt="" width="24" height="24">Agendar pelo WhatsApp</a>
+        <a class="btn linha" href="#servicos">Ver serviços e valores</a>
+      </div>
+      <p class="aviso entra" style="--d:.5s"><svg aria-hidden="true"><use href="#i-agenda"/></svg>Atendimento somente com horário marcado.</p>
+    </div>
+    <figure class="retrato entra" style="--d:.2s">
+      <div class="arte" role="img" aria-label="Ilustração de um ramo de sálvia"><svg aria-hidden="true"><use href="#a-ramo"/></svg></div>
+    </figure>
+  </div>
+</section>
+
+<div class="letreiro" aria-hidden="true"><div class="letreiro-trilho"><span>Personal trainer</span><span>Consultoria online</span><span>Avaliação física</span><span>Liberação miofascial</span><span>Massagem relaxante</span><span>Shiatsu</span><span>Acupuntura</span><span>Reflexologia podal</span><span>Drenagem linfática</span><span>Estética corporal</span><span>Depilação</span><span>Bronzeamento</span><span>Injetáveis</span><span>Personal trainer</span><span>Consultoria online</span><span>Avaliação física</span><span>Liberação miofascial</span><span>Massagem relaxante</span><span>Shiatsu</span><span>Acupuntura</span><span>Reflexologia podal</span><span>Drenagem linfática</span><span>Estética corporal</span><span>Depilação</span><span>Bronzeamento</span><span>Injetáveis</span></div></div>
+
+<div class="faixa">
+  <ul class="wrap">
+    <li><svg aria-hidden="true"><use href="#i-agenda"/></svg><div><strong>Horário marcado</strong><span>Todos os atendimentos são agendados pelo WhatsApp.</span></div></li>
+    <li><svg aria-hidden="true"><use href="#i-sinal"/></svg><div><strong>Confirmação com sinal de 50%</strong><span>O horário fica reservado após o sinal da sessão escolhida.</span></div></li>
+    <li><svg aria-hidden="true"><use href="#i-local"/></svg><div><strong>Vila Aurora</strong><span>Rua das Sálvias, 120, Centro.</span></div></li>
+  </ul>
+</div>
+
+<!-- ================= SERVIÇOS ================= -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="cab">
+      <h2>Serviços e valores</h2>
+      <p>Escolha uma área para ver o que está incluído, a duração e o valor de cada sessão.</p>
+    </div>
+
+    <div class="carta">
+      <div class="areas" role="tablist" aria-label="Áreas de atendimento">
+        <button role="tab" id="t-treino" aria-controls="treino" aria-selected="true">Treino <small>3</small></button>
+        <button role="tab" id="t-avaliacao" aria-controls="avaliacao" aria-selected="false" tabindex="-1">Avaliação física <small>1</small></button>
+        <button role="tab" id="t-massagens" aria-controls="massagens" aria-selected="false" tabindex="-1">Massagens <small>5</small></button>
+        <button role="tab" id="t-terapias" aria-controls="terapias" aria-selected="false" tabindex="-1">Terapias <small>2</small></button>
+        <button role="tab" id="t-estetica" aria-controls="estetica" aria-selected="false" tabindex="-1">Estética corporal <small>5</small></button>
+        <button role="tab" id="t-depilacao" aria-controls="depilacao" aria-selected="false" tabindex="-1">Depilação <small>7</small></button>
+        <button role="tab" id="t-bronze" aria-controls="bronze" aria-selected="false" tabindex="-1">Bronzeamento <small>4</small></button>
+        <button role="tab" id="t-injetaveis" aria-controls="injetaveis" aria-selected="false" tabindex="-1">Injetáveis <small>3</small></button>
+      </div>
+
+      <div>
+        <!-- TREINO -->
+        <div class="painel" id="treino" role="tabpanel" aria-labelledby="t-treino" tabindex="0">
+          <div>
+            <h3 class="area">Treino</h3>
+            <p class="intro">Treino individualizado, presencial ou online, com acompanhamento técnico e planejamento conforme o seu objetivo.</p>
+            <ul class="itens">
+              <li class="item">
+                <div class="linha-preco"><h4>Personal trainer presencial</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>90<small>,00</small></p></div>
+                <p class="desc">Treino individualizado, acompanhamento técnico, correção de execução e planejamento conforme seus objetivos.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>por hora-aula</span><a class="agendar" data-zap data-servico="Personal trainer presencial" href="#" target="_blank" rel="noopener">Agendar</a></p>
+              </li>
+              <li class="item">
+                <div class="linha-preco"><h4>Consultoria online mensal</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>149<small>,00</small></p></div>
+                <p class="desc">Treino personalizado, orientações de nutrição, suporte contínuo e acompanhamento da evolução, onde você estiver.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>por mês</span><a class="agendar" data-zap data-servico="Consultoria online mensal" href="#" target="_blank" rel="noopener">Contratar</a></p>
+              </li>
+              <li class="item">
+                <div class="linha-preco"><h4>Consultoria online trimestral</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>399<small>,00</small></p></div>
+                <p class="desc">O mesmo acompanhamento da consultoria online, com pagamento a cada 3 meses.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>a cada 3 meses</span><a class="agendar" data-zap data-servico="Consultoria online trimestral" href="#" target="_blank" rel="noopener">Contratar</a></p>
+              </li>
+            </ul>
+          </div>
+          <figure class="revela"><div class="arte" role="img" aria-label="Ilustração de um halter"><svg aria-hidden="true"><use href="#a-treino"/></svg></div><figcaption>Presencial ou online, no seu ritmo.</figcaption></figure>
+        </div>
+
+        <!-- AVALIAÇÃO -->
+        <div class="painel" id="avaliacao" role="tabpanel" aria-labelledby="t-avaliacao" tabindex="0" hidden>
+          <div>
+            <h3 class="area">Avaliação física</h3>
+            <p class="intro">Uma análise completa para entender suas necessidades e traçar as melhores estratégias para o seu objetivo.</p>
+            <ul class="inclui">
+              <li><strong>Anamnese</strong><span>Histórico de saúde, hábitos, rotina, objetivos e estilo de vida.</span></li>
+              <li><strong>Avaliação antropométrica</strong><span>Peso, altura, IMC, circunferências e dobras cutâneas.</span></li>
+              <li><strong>Composição corporal</strong><span>Massa muscular, percentual de gordura e outros indicadores.</span></li>
+              <li><strong>Avaliação postural</strong><span>Desequilíbrios e correções para mais performance.</span></li>
+              <li><strong>Testes físicos</strong><span>Força, resistência, mobilidade e condicionamento.</span></li>
+            </ul>
+            <ul class="itens">
+              <li class="item">
+                <div class="linha-preco"><h4>Avaliação física completa</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>120<small>,00</small></p></div>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>cerca de 50 min</span><a class="agendar" data-zap data-servico="Avaliação física" href="#" target="_blank" rel="noopener">Agendar</a></p>
+              </li>
+            </ul>
+          </div>
+          <figure class="revela"><div class="arte" role="img" aria-label="Ilustração de um cronômetro"><svg aria-hidden="true"><use href="#a-avaliacao"/></svg></div><figcaption>Conheça seu corpo antes de começar.</figcaption></figure>
+        </div>
+
+        <!-- MASSAGENS -->
+        <div class="painel" id="massagens" role="tabpanel" aria-labelledby="t-massagens" tabindex="0" hidden>
+          <div>
+            <h3 class="area">Massagens</h3>
+            <p class="intro">Alívio, equilíbrio e qualidade de vida.</p>
+            <ul class="itens">
+              <li class="item"><div class="linha-preco"><h4>Liberação miofascial</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>140<small>,00</small></p></div>
+                <p class="desc">Manobras profundas e precisas na fáscia muscular, para aliviar dores, ganhar mobilidade e prevenir lesões.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>50 min</span><a class="agendar" data-zap data-servico="Liberação miofascial" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Massagem relaxante</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>130<small>,00</small></p></div>
+                <p class="desc">Relaxamento físico e mental, alívio do estresse e da tensão muscular e um sono melhor.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>50 min</span><a class="agendar" data-zap data-servico="Massagem relaxante" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Massagem com ventosa</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>140<small>,00</small></p></div>
+                <p class="desc">Copos de sucção que estimulam a circulação, reduzem dores musculares e ajudam na recuperação.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>50 min</span><a class="agendar" data-zap data-servico="Massagem com ventosa" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Shiatsu</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>150<small>,00</small></p></div>
+                <p class="desc">Técnica japonesa de pressão em pontos do corpo que alivia tensões e promove equilíbrio físico e emocional.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>60 min</span><a class="agendar" data-zap data-servico="Shiatsu" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Quick massage</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>70<small>,00</small></p></div>
+                <p class="desc">Massagem rápida no pescoço, nos ombros e nas costas, para aliviar o estresse do dia a dia.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>25 min</span><a class="agendar" data-zap data-servico="Quick massage" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+            </ul>
+          </div>
+          <figure class="revela"><div class="arte" role="img" aria-label="Ilustração de pedras empilhadas e uma folha"><svg aria-hidden="true"><use href="#a-massagens"/></svg></div><figcaption>Sessões de 25 a 60 minutos.</figcaption></figure>
+        </div>
+
+        <!-- TERAPIAS -->
+        <div class="painel" id="terapias" role="tabpanel" aria-labelledby="t-terapias" tabindex="0" hidden>
+          <div>
+            <h3 class="area">Terapias complementares</h3>
+            <p class="intro">Técnicas que auxiliam na saúde física e emocional, com uma abordagem integrativa para cuidar de você por completo.</p>
+            <ul class="itens">
+              <li class="item"><div class="linha-preco"><h4>Acupuntura</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>150<small>,00</small></p></div>
+                <p class="desc">Técnica da medicina tradicional chinesa que estimula pontos do corpo para aliviar dores, reduzir o estresse e melhorar o sono.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>1 hora</span><a class="agendar" data-zap data-servico="Acupuntura" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Reflexologia podal</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>130<small>,00</small></p></div>
+                <p class="desc">Estímulo de pontos nos pés para equilíbrio do corpo, alívio de tensões e melhor circulação.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>50 min</span><a class="agendar" data-zap data-servico="Reflexologia podal" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+            </ul>
+          </div>
+          <figure class="revela"><div class="arte" role="img" aria-label="Ilustração de uma flor de lótus"><svg aria-hidden="true"><use href="#a-terapias"/></svg></div><figcaption>Corpo e mente no mesmo cuidado.</figcaption></figure>
+        </div>
+
+        <!-- ESTÉTICA -->
+        <div class="painel" id="estetica" role="tabpanel" aria-labelledby="t-estetica" tabindex="0" hidden>
+          <div>
+            <h3 class="area">Estética corporal</h3>
+            <p class="intro">Tratamentos personalizados para modelar, definir e cuidar do seu corpo, com técnicas seguras.</p>
+            <ul class="itens">
+              <li class="item"><div class="linha-preco"><h4>Esfoliação corporal</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>120<small>,00</small></p></div>
+                <p class="desc">Remove células mortas, melhora a textura da pele e potencializa a absorção de ativos.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>50 min</span><a class="agendar" data-zap data-servico="Esfoliação corporal" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Drenagem linfática</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>130<small>,00</small></p></div>
+                <p class="desc">Estimula a circulação, reduz o inchaço e traz sensação de leveza.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>50 min</span><a class="agendar" data-zap data-servico="Drenagem linfática" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Massagem modeladora</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>130<small>,00</small></p></div>
+                <p class="desc">Ajuda na redução de medidas, modela o contorno corporal e melhora a firmeza da pele.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>50 min</span><a class="agendar" data-zap data-servico="Massagem modeladora" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Detox corporal</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>140<small>,00</small></p></div>
+                <p class="desc">Ativa a circulação, ajuda a eliminar líquidos e melhora o aspecto da pele.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>50 min</span><a class="agendar" data-zap data-servico="Detox corporal" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Hidrolipoclasia ultrassônica</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>110<small>,00</small></p></div>
+                <p class="desc">Tecnologia que auxilia na quebra de gordura localizada e melhora o contorno corporal.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>40 min</span><a class="agendar" data-zap data-servico="Hidrolipoclasia ultrassônica" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+            </ul>
+          </div>
+          <figure class="revela"><div class="arte" role="img" aria-label="Ilustração de uma gota com brilho"><svg aria-hidden="true"><use href="#a-estetica"/></svg></div><figcaption>Cuidado com resultado visível.</figcaption></figure>
+        </div>
+
+        <!-- DEPILAÇÃO -->
+        <div class="painel" id="depilacao" role="tabpanel" aria-labelledby="t-depilacao" tabindex="0" hidden>
+          <div>
+            <h3 class="area">Depilação</h3>
+            <p class="intro">Técnica segura e produtos de qualidade para uma pele mais lisa e bem cuidada.</p>
+            <ul class="itens">
+              <li class="item"><div class="linha-preco"><h4>Pernas</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>90<small>,00</small></p></div><p class="desc">Depilação completa das pernas.</p><p class="meta"><a class="agendar" data-zap data-servico="Depilação de pernas" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Peito</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>35<small>,00</small></p></div><p class="desc">Aparência mais limpa e uniforme no tórax.</p><p class="meta"><a class="agendar" data-zap data-servico="Depilação do peito" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Abdômen</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>30<small>,00</small></p></div><p class="desc">Pele mais lisa e melhor definição da região.</p><p class="meta"><a class="agendar" data-zap data-servico="Depilação do abdômen" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Virilha</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>70<small>,00</small></p></div><p class="desc">Higiene e conforto, com técnica cuidadosa.</p><p class="meta"><a class="agendar" data-zap data-servico="Depilação da virilha" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Glúteo</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>30<small>,00</small></p></div><p class="desc">Mais higiene e pele uniforme.</p><p class="meta"><a class="agendar" data-zap data-servico="Depilação do glúteo" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Axilas</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>35<small>,00</small></p></div><p class="desc">Conforto e bem-estar no dia a dia.</p><p class="meta"><a class="agendar" data-zap data-servico="Depilação das axilas" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Costas</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>45<small>,00</small></p></div><p class="desc">Depilação completa das costas, com ótimo acabamento.</p><p class="meta"><a class="agendar" data-zap data-servico="Depilação das costas" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+            </ul>
+          </div>
+          <figure class="revela"><div class="arte" role="img" aria-label="Ilustração de uma folha"><svg aria-hidden="true"><use href="#a-depilacao"/></svg></div><figcaption>Pele mais lisa, mais conforto.</figcaption></figure>
+        </div>
+
+        <!-- BRONZEAMENTO -->
+        <div class="painel" id="bronze" role="tabpanel" aria-labelledby="t-bronze" tabindex="0" hidden>
+          <div>
+            <h3 class="area">Bronzeamento</h3>
+            <p class="intro">Bronzeado natural ou em cabine, com segurança e orientação profissional. Atendimento feminino e masculino.</p>
+            <ul class="itens">
+              <li class="item"><div class="linha-preco"><h4>Em cabine, 30 min</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>90<small>,00</small></p></div>
+                <p class="desc">Tecnologia segura e resultado uniforme.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>30 min</span><a class="agendar" data-zap data-servico="Bronzeamento em cabine de 30 min" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Em cabine, 1 hora</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>110<small>,00</small></p></div>
+                <p class="desc">A mesma sessão em cabine, com o dobro do tempo.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>1 hora</span><a class="agendar" data-zap data-servico="Bronzeamento em cabine de 1 hora" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Natural</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>110<small>,00</small></p></div>
+                <p class="desc">Exposição ao sol com orientação, para um bronzeado natural e duradouro.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>cerca de 1 hora</span><a class="agendar" data-zap data-servico="Bronzeamento natural" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Pacote de 5 sessões</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="rs">R$</span>450<small>,00</small></p></div>
+                <p class="desc">Vale para o bronzeamento em cabine ou natural.</p>
+                <p class="meta"><span class="tempo"><svg aria-hidden="true"><use href="#i-relogio"/></svg>5 sessões</span><a class="agendar" data-zap data-servico="Pacote de 5 sessões de bronzeamento" href="#" target="_blank" rel="noopener">Agendar</a></p></li>
+            </ul>
+          </div>
+          <figure class="revela"><div class="arte" role="img" aria-label="Ilustração de um sol"><svg aria-hidden="true"><use href="#a-bronze"/></svg></div><figcaption>Pele dourada e saudável.</figcaption></figure>
+        </div>
+
+        <!-- INJETÁVEIS (bloco escuro de destaque) -->
+        <div class="painel claro" id="injetaveis" role="tabpanel" aria-labelledby="t-injetaveis" tabindex="0" hidden>
+          <div>
+            <h3 class="area">Injetáveis</h3>
+            <p class="intro">Procedimentos realizados mediante avaliação prévia e agendamento, com profissionais habilitadas.</p>
+            <div class="duo">
+              <div><strong>Helena Prado</strong><span>Biomédica esteta</span></div>
+              <div><strong>Lívia Torres</strong><span>Enfermeira esteta</span></div>
+            </div>
+            <ul class="itens">
+              <li class="item"><div class="linha-preco"><h4>Toxina botulínica</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="apartir">a partir de</span><span class="rs">R$</span>900<small>,00</small></p></div>
+                <p class="meta"><a class="agendar" data-zap data-servico="Avaliação para toxina botulínica" href="#" target="_blank" rel="noopener">Agendar avaliação</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Preenchimento labial</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="apartir">a partir de</span><span class="rs">R$</span>1.200<small>,00</small></p></div>
+                <p class="meta"><a class="agendar" data-zap data-servico="Avaliação para preenchimento labial" href="#" target="_blank" rel="noopener">Agendar avaliação</a></p></li>
+              <li class="item"><div class="linha-preco"><h4>Bioestimulador de colágeno</h4><span class="pontos" aria-hidden="true"></span><p class="preco"><span class="apartir">a partir de</span><span class="rs">R$</span>1.500<small>,00</small></p></div>
+                <p class="meta"><a class="agendar" data-zap data-servico="Avaliação para bioestimulador de colágeno" href="#" target="_blank" rel="noopener">Agendar avaliação</a></p></li>
+            </ul>
+          </div>
+          <figure class="revela"><div class="arte arte-escura" role="img" aria-label="Ilustração de um frasco e uma gota"><svg aria-hidden="true"><use href="#a-injetaveis"/></svg></div><figcaption>Sempre com avaliação prévia.</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EQUIPE ================= -->
+<section class="equipe" id="equipe">
+  <div class="wrap">
+    <div class="cab">
+      <h2>Quem atende</h2>
+      <p>Cada área com um profissional dedicado.</p>
+    </div>
+    <div class="pessoas">
+      <article class="pessoa revela">
+        <div class="arte arte-pessoa" role="img" aria-label="Monograma de Rafael Moura"><span>RM</span></div>
+        <h3>Rafael Moura</h3>
+        <p class="papel">Personal trainer</p>
+        <p class="reg">CREF 000000-G/SP</p>
+        <p class="faz">Treino presencial, consultoria online e avaliação física.</p>
+      </article>
+      <article class="pessoa revela">
+        <div class="arte arte-pessoa" role="img" aria-label="Monograma de Helena Prado"><span>HP</span></div>
+        <h3>Helena Prado</h3>
+        <p class="papel">Biomédica esteta</p>
+        <p class="reg">CRBM 00000</p>
+        <p class="faz">Injetáveis, mediante avaliação prévia.</p>
+      </article>
+      <article class="pessoa revela">
+        <div class="arte arte-pessoa" role="img" aria-label="Monograma de Lívia Torres"><span>LT</span></div>
+        <h3>Lívia Torres</h3>
+        <p class="papel">Enfermeira esteta</p>
+        <p class="reg">COREN 000000</p>
+        <p class="faz">Injetáveis, mediante avaliação prévia.</p>
+      </article>
+    </div>
+    <p class="nota">Massagens, terapias, estética, depilação e bronzeamento com uma equipe de quatro terapeutas.</p>
+  </div>
+</section>
+
+<!-- ================= COMO AGENDAR ================= -->
+<section id="agendar">
+  <div class="wrap agenda-grade">
+    <div class="agenda-texto">
+      <div class="cab">
+        <h2>Como agendar</h2>
+        <p>Tudo pelo WhatsApp, em poucas mensagens.</p>
+      </div>
+      <ol class="passos">
+        <li><div><strong>Escolha o serviço</strong><span>Toque em "Agendar" ao lado do serviço: a mensagem já vai com o nome dele.</span></div></li>
+        <li><div><strong>Combine o horário</strong><span>A equipe responde com os horários livres.</span></div></li>
+        <li><div><strong>Envie o sinal de 50%</strong><span>O horário fica confirmado com 50% do valor da sessão escolhida.</span></div></li>
+      </ol>
+      <div class="acoes"><a class="btn" data-zap href="#" target="_blank" rel="noopener"><img src="img/whatsapp-sem-fundo.png" alt="" width="24" height="24">Agendar pelo WhatsApp</a></div>
+    </div>
+
+    <div class="conversa-trilho">
+      <div class="conversa">
+        <div class="chat" role="log" aria-live="polite" aria-label="Exemplo de conversa de agendamento pelo WhatsApp">
+          <div class="chat-topo"><span class="chat-av" aria-hidden="true"><svg><use href="#i-salvia"/></svg></span><div><strong>Sálvia Studio</strong><span class="chat-status">Responde pelo WhatsApp</span></div></div>
+          <div class="fio"></div>
+        </div>
+        <div class="chat-meta" aria-hidden="true"><div class="trilha"><b></b></div><p class="chat-dica">Role a página para acompanhar a conversa</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DÚVIDAS ================= -->
+<section class="duvidas" id="duvidas">
+  <div class="wrap">
+    <div class="cab"><h2>Dúvidas frequentes</h2></div>
+    <div class="faq">
+      <details><summary>Preciso marcar horário?</summary><p>Sim. O atendimento é feito somente com horário marcado, pelo WhatsApp.</p></details>
+      <details><summary>Como meu horário é confirmado?</summary><p>Com o pagamento de 50% do valor da sessão escolhida, por Pix ou cartão.</p></details>
+      <details><summary>A consultoria online funciona de qualquer cidade?</summary><p>Sim. É um acompanhamento individualizado com treino, orientações de nutrição e suporte contínuo, onde você estiver: R$ 149,00 por mês ou R$ 399,00 por trimestre.</p></details>
+      <details><summary>Os injetáveis precisam de avaliação?</summary><p>Sim. Todos os procedimentos injetáveis são feitos mediante avaliação prévia, com a biomédica esteta Helena Prado ou a enfermeira esteta Lívia Torres.</p></details>
+      <details><summary>O bronzeamento atende homens e mulheres?</summary><p>Sim, o atendimento é feminino e masculino, em cabine ou com exposição natural ao sol.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section id="contato">
+  <div class="wrap contato-grade">
+    <div>
+      <div class="cab"><h2>Agende seu horário</h2></div>
+      <a class="zap-grande" data-zap href="#" target="_blank" rel="noopener"><img src="img/whatsapp.png" alt="" width="44" height="44">(00) 90000-0000</a>
+      <ul class="dados">
+        <li><span>Endereço</span><span>Rua das Sálvias, 120, Centro, Vila Aurora</span></li>
+        <li><span>Instagram</span><span>@salviastudio</span></li>
+        <li><span>Horários</span><span>Segunda a sábado, das 7h às 21h</span></li>
+        <li><span>Atendimento</span><span>Somente com horário marcado</span></li>
+      </ul>
+    </div>
+    <div class="mapa-arte" role="img" aria-label="Mapa ilustrado com a localização do estúdio"><svg aria-hidden="true"><use href="#a-mapa"/></svg><p>Rua das Sálvias, 120</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap rodape">
+    <a class="marca marca-rodape" href="#inicio" aria-label="Sálvia Studio, voltar ao início"><svg aria-hidden="true"><use href="#i-salvia"/></svg><span>Sálvia Studio</span></a>
+    <!-- TROCAR: seu nome -->
+    <p>Sálvia Studio é uma marca fictícia criada para portfólio.<br>Design e desenvolvimento: [Seu nome] · 2026</p>
+  </div>
+</footer>
+
+<a class="flutua" data-zap href="#" target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp"><img src="img/whatsapp.png" alt="" width="40" height="40"></a>
+<div class="barra" id="barra"><a class="btn" data-zap href="#" target="_blank" rel="noopener"><img src="img/whatsapp-sem-fundo.png" alt="" width="24" height="24">Agendar pelo WhatsApp</a></div>
+
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
